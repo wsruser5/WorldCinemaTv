@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.worldcinematv.RecyclerItemScreen"
+    android:background="@color/colorPrim">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/ivBgFilmCover"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/bg_film"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvFilmNameRecyclerElement"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="17dp"
+                    android:text="The Magicians"
+                    android:layout_marginLeft="32dp"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@+id/icBackRecyclerItem"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/ivFgCoverFilm"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/fg_film"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/ivBgFilmCover" />
+
+                <ImageView
+                    android:id="@+id/icBackRecyclerItem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:src="@drawable/arrow"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tvFilmNameRecyclerElement" />
+
+                <ImageView
+                    android:id="@+id/icAge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_age"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvFilmNameRecyclerElement"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tvFilmNameRecyclerElement"
+                    android:layout_marginRight="59dp"/>
+
+                <ImageView
+                    android:id="@+id/icComments"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_comments"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvFilmNameRecyclerElement"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tvFilmNameRecyclerElement"
+                    android:layout_marginRight="16dp"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/tags_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#00000000"
+                    android:elevation="0dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/ivBgFilmCover"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="16dp"
+                android:text="Смотреть"
+                android:textColor="@color/white"
+                android:textStyle="bold"/>
+
+            <VideoView
+                android:id="@+id/videoView"
+                android:layout_marginTop="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Описание"
+                android:textSize="24sp"
+                android:layout_marginTop="32dp"
+                android:layout_marginStart="16dp"
+                android:textColor="@color/white"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/textDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/textDesc"
+                android:textSize="14sp"
+                android:layout_margin="16dp"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Кадры"
+                android:textSize="24sp"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="16dp"
+                android:textColor="@color/white"
+                android:textStyle="bold"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/cadrs_container"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="#00000000"
+                android:layout_marginTop="17dp"
+                android:elevation="0dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Эпизоды"
+                android:textSize="24sp"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="16dp"
+                android:textColor="@color/white"
+                android:textStyle="bold"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/episodes_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#00000000"
+                android:layout_marginTop="17dp"
+                android:elevation="0dp"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</FrameLayout>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_browse_fragment"
+    android:name="com.example.worldcinematv.MainActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    tools:deviceIds="tv"
+    tools:ignore="MergeRootFrame"
+    android:background="#332973">
+
+    <ImageView
+        android:layout_width="372dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/logo"
+        android:layout_gravity="center_horizontal"/>
+
+    <EditText
+        android:id="@+id/etSignInEmail"
+        android:layout_width="343dp"
+        android:layout_height="35dp"
+        android:hint="E-mail"
+        android:layout_marginTop="340dp"
+        android:textColor="@color/white"
+        android:layout_gravity="center_horizontal"
+        android:textColorHint="@color/hintColor"
+        android:background="@drawable/bg_sign_et"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:inputType="textEmailAddress"/>
+
+    <EditText
+        android:id="@+id/etSignInPassword"
+        android:layout_width="343dp"
+        android:layout_height="35dp"
+        android:hint="Пароль"
+        android:layout_marginTop="390dp"
+        android:textColor="@color/white"
+        android:layout_gravity="center_horizontal"
+        android:textColorHint="@color/hintColor"
+        android:background="@drawable/bg_sign_et"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:inputType="textEmailAddress"/>
+
+    <Button
+        android:id="@+id/btSignInLogIn"
+        android:layout_width="343dp"
+        android:layout_height="44dp"
+        android:background="@drawable/bg_btn_sign"
+        android:layout_gravity="center_horizontal"
+        android:text="Войти"
+        android:textAllCaps="false"
+        android:textColorHint="@color/white"
+        android:layout_marginTop="450dp"/>
+
+
+
+</FrameLayout>
